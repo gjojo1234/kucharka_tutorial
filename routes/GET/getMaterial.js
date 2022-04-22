@@ -1,5 +1,5 @@
 const express = require('express');
-const getMaterial = express.Router().get('/getMaterial', (req, res) => {
+const getMaterial = express.Router().get('/getmaterial', (req, res) => {
     res.json({
         msg: 'Úspešne som získal suroviny',
         zoznamSurovin: [
