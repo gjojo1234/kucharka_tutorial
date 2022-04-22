@@ -1,12 +1,18 @@
 const express = require('express');
+const material = require('../../models/material');
 const getMaterial = express.Router().get('/getmaterial', (req, res) => {
-    res.json({
-        msg: 'Úspešne som získal suroviny',
-        zoznamSurovin: [
-                {surovina: 'mrkva'},
-                {surovina: 'cibuľa'},
-                {surovina: 'zemiaky'}
-        ]
+    material.find((err,docs) => {
+        if(err){
+            return res.json({
+                msg: "nenašiel sa žiadny materiál",
+                documents: []
+            }) 
+        } else {
+            return res.json({
+                msg: "úspešne sa nám podarilo získať suroviny",
+                documents: docs
+            })
+        }
     })
 });
 
