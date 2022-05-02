@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const mongo = require('./database/mongo');
+const cors = require('cors');
 
 const getMaterial = require('./routes/GET/getMaterial');
 const saveMaterial = require("./routes/POST/saveMaterial");
@@ -23,7 +24,7 @@ connectToMongoDB();
 app.use(express.json({extended:false}));
 
 // routy GET
-app.use('/', getMaterial);
+app.use('/', cors(), getMaterial);
 
 //routy POST
 app.use('/', saveMaterial);
