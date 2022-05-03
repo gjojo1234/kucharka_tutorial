@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import Material from '../components/Material';
 
 const Main = () => {
   const [materialy, setMaterialy] = useState([]);
   const [serverMessage, setServerMessage] = useState("");
+  const [kliknutoUzivatelem, setKliknutoUzivatelem] = useState("");
   const pridanieMaterialu = async () => { 
     const data = await fetch("http://localhost:5000/getmaterial");
     const finalData = await data.json();
@@ -10,17 +12,28 @@ const Main = () => {
     setMaterialy(documents);
     setServerMessage(msg);
    }
+  useEffect(() => {
+    pridanieMaterialu();
+  
+    
+    }
+  , []);
+  const kliknuto = (material) => { 
+    setKliknutoUzivatelem(material);
+   }
+  
   return (
     <div>
       {
         materialy.map((material, index) => { 
           return (
-            <div key={index}>{material.name}</div>
+            <Material eventklik={kliknuto} key={index} name={material.name} cislovporadi={index}/>
           )
         })
       }
-      <div className='btn' onClick={pridanieMaterialu}>pridanie</div>
+      
       <div className='msg'>{serverMessage}</div>
+      {kliknutoUzivatelem}
     </div>
   )
 }
