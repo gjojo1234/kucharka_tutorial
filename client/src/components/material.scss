@@ -1,0 +1,36 @@
+$bg-btn: rgb(37, 203, 203);
+$bg-btn-hover: lighten($bg-btn, 15%);
+.materialy {
+    display: flex;   
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;   
+}
+.matName {
+    width: 100px;
+}
+.btn {
+    display: inline-flex;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: $bg-btn;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+        animation-name: posun;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;       
+    }   
+}
+@keyframes posun {
+    0%{
+        position: relative;
+        left: 0px;       
+    }
+    100% {
+        position: relative;
+        left: 20px;
+        background-color: $bg-btn-hover;        
+    }
+}

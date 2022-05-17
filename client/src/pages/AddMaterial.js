@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 
-
 const AddMaterial = () => {
   const [vstupOdUzivatela, setVstupOdUzivatela] = useState("");
   const vlozeniDoDB = () => { 
@@ -19,7 +18,7 @@ const AddMaterial = () => {
      })
    }
   return (
-    <div>
+    <div className='main'>
       <input type="text" value={vstupOdUzivatela} onInput={(e)=>{
         setVstupOdUzivatela(e.target.value)
       }}/>

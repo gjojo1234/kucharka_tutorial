@@ -1,0 +1,15 @@
+$bg-page1: #ADFF73;
+$bg-page2: #5EA82A;
+$word-color: #3d2a3e;
+
+.main {
+    background: linear-gradient($bg-page1 0%, $bg-page2 100%);
+    color: $word-color;
+    height: auto;
+    padding: 1em;
+}
+.msg {
+    padding: 1em 0em;
+    text-transform: uppercase;
+    
+}

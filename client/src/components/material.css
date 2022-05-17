@@ -1,0 +1,39 @@
+.materialy {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.matName {
+  width: 100px;
+}
+
+.btn {
+  display: inline-flex;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: rgb(37, 203, 203);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn:hover {
+  animation-name: posun;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes posun {
+  0% {
+    position: relative;
+    left: 0px;
+  }
+  100% {
+    position: relative;
+    left: 20px;
+    background-color: #5be1e1;
+  }
+}
+
+/*# sourceMappingURL=material.css.map */

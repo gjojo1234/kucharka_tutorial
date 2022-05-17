@@ -1,0 +1,13 @@
+.main {
+  background: linear-gradient(#ADFF73 0%, #5EA82A 100%);
+  color: #3d2a3e;
+  height: auto;
+  padding: 1em;
+}
+
+.msg {
+  padding: 1em 0em;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=main.css.map */

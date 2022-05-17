@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Material from '../components/Material';
+import './main.css';
 
 const Main = () => {
   const [materialy, setMaterialy] = useState([]);
@@ -23,7 +24,7 @@ const Main = () => {
    }
   
   return (
-    <div>
+    <div className='main'>
       {
         materialy.map((material, index) => { 
           return (

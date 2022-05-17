@@ -1,0 +1,29 @@
+.navmenu {
+  background-color: #D84AE0;
+  height: 5em;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navmenu1 {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #AAFF6E;
+  padding: 0 50px;
+}
+.navmenu1:hover {
+  animation-name: navhover;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navhover {
+  100% {
+    transform: scale(1.3);
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */
